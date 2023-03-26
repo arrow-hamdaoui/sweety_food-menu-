@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sweety Food menu </title>
+	<style>
+  
+	body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #000000e1;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.header {
+			background-color:#D2691E;
+			color: #000000e1;
+			padding: 20px;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 3rem;
+			margin: 0;
+			text-transform: capitalize;
+		}
+
+		.menu {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-top: 40px;
+      
+		}
+
+		.item {
+			background-color: #D2691E;
+			box-shadow: 0 5px 4px #fffefe;
+		}
+	
+
+		.item:hover {
+			box-shadow: 0 6px 12px #fffdfd;
+			top: -30px;
+			transition: all 0.2s ease-in-out;
+		}
+
+		.item img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.item h2 {
+			font-size: 2rem;
+			margin-top: 15px;
+		}
+
+		.item p {
+			margin: 10px 0 20px;
+		}
+
+		.item .price {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			background-color: #f44336;
+			color: #db4c00;
+			padding: 10px;
+			font-size: 1.5rem;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			line-height: 1.5;
+		}
+    .btn {
+        background-color: #000000d4;
+        color: #e28b0e;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+      .btn:hover {
+        background-color: #00000091;
+      }
+
+		.item .badge {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			background-color: #f44336;
+			color: #c34f11;
+			padding: 10px;
+			font-size: 1.5rem;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			line-height: 1.5;
+		}
+    #myBtn {
+                      display: none;
+                      position: fixed;
+                      bottom: 20px;
+                      right: 30px;
+                      z-index: 99;
+                      font-size: 18px;
+                      border: none;
+                      outline: none;
+                      background-color: #00000091;
+                      color: rgb(213, 124, 0);
+                      cursor: pointer;
+                      padding: 15px;
+                      border-radius: 4px;
+                    }
+                    
+                    #myBtn:hover {
+                      background-color: #00000091;
+                    } 
+
+		
+	</style>
+</head>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<style>
+    #myBtn {
+      display: none; 
+      position: fixed; 
+      
+      right: 30px; 
+      z-index: 99; 
+      border: none; 
+      outline: none; 
+      background-color: #00000091; 
+      color: rgb(213, 124, 0); 
+      cursor: pointer; 
+      padding: 20px; 
+      border-radius: 100px; 
+    }
+
+    #myBtn:hover {
+      background-color: #555; 
+    }
+</style>
+
+
+
+<script>
+    
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<body>
+  
+ 
+	<div class="container">
+		<div class="header"> 
+			<h1><u> sweety food Menu</u></h1>
+			<img src="C:\Users\LEGION\Documents\arrow project\pics\a22.png" alt="My logo" style="height: 200px; width: 200px;">
+            <p><b><i>fast food</i></b></p>
+            <nav>
+            <button class="btn"> <li><a style="color:#ff9800;"href="#burgers">Burgers</a> </button>  
+           <button class="btn"> <li><a style="color:#ff9800;"href="#sandwich/raghif">Sandwiches/raghif</a></button>
+			      <button class="btn"> <li><a style="color:#ff9800;"href="#pizzas">pizzas</a></button> 
+            <button class="btn"> <li><a style="color:#ff9800;"href="#tacos">tacos</a></button>
+            <button class="btn"> <li><a style="color:#ff9800;"href="#malfouf">malfouf</a></button>
+            <button class="btn"> <li><a style="color:#ff9800;"href="#ma9loub">ma9loub/soufflé</a></button>
+              <p><b><i> petits plats tout douceur</i></b></p>
+              <button class="btn"> <li><a style="color:#ff9800;"href="#entrée">entrée</a> </button>
+                   <button class="btn"> <li><a style="color:#ff9800;"href="#pasta">pasta</a></button>
+                <button class="btn"> <li><a style="color:#ff9800;"href="#kintaki">kintaki</a></button> 
+                <button class="btn"> <li><a style="color:#ff9800;"href="#gratins">gratins</a></button>
+                <button class="btn"> <li><a style="color:#ff9800;"href="#plats">plats</a></button>
+                  <p><b><i> nos delicieux desserts</i></b></p>
+                  <button class="btn"> <li><a style="color:#ff9800;"href="#crepes">crepes</a> </button>  
+                    <button class="btn"> <li><a style="color:#ff9800;"href="#gaufre">gaufre</a></button>
+                     <button class="btn"> <li><a style="color:#ff9800;"href="#pancake">pancake</a></button> 
+                     <button class="btn"> <li><a style="color:#ff9800;"href="#bubble waffle">bubble waffle</a></button>
+                     <button class="btn"><li><a style="color:#ff9800;"href="#dessert">dessert</a></button>
+                     <button class="btn"> <li><a style="color:#ff9800;"href="#fruitella">fruitella</a></button>
+                    
+                        
+                        <p><b><i> nos jus rafraichissants chauds et froids</i></b></p>
+                      <button class="btn"> <li><a style="color:#ff9800;"href="#smoothies">smoothies</a> </button>  
+                        <button class="btn"> <li><a style="color:#ff9800;"href="#milkchakes">milkchakes</a></button>
+                         <button class="btn"> <li><a style="color:#ff9800;"href="#boisson froides">boisson froides</a></button> 
+                         <button class="btn"> <li><a style="color:#ff9800;"href="#boisson chaudes">boisson chaudes</a></button>
+                         
+                
+              
+
+            </nav> 
+		</div>
+		<div class="menu">
+			<div class="item">
+				<img src="C:\Users\LEGION\Documents\arrow project\pics\a16.jpg"alt="hamburger">
+                <section id="burgers">
+				<h2><u>hamburger</u></h2>
+                <ul>
+
+                        <li>
+                          <h4>cheese Burger</h4>
+                          <p><i>100% bœuf, pain brioché, fromage, laitue, tomate, oignons grillés et sauce spéciale.</i></p>
+                          <p><b>price:<i>250 DA.</i> </b></p>
+                        </li>
+                        <li>
+                          <h4>le bigy Cheeseburger</h4>
+                          <p><i>Deux steaks 100% bœuf, fromage fondu, ketchup, moutarde, laitue et tomate.</i></p>
+                          <p><b>price:<i>350 DA.</i></b></p>
+                        </li>
+                        <li>
+                          <h4>fast Cheeseburger</h4>
+                          <p><i>100% bœuf, pain brioché, fromage, laitue, tomate, oignons grillés et sauce spéciale + ("Barquette frite")</i></p>
+                          <p><b>price:<i>300 DA.</i></b></p>
+                        </li>
+                        <li>
+                          <h4>cheese chicken</h4>
+                          <p><i> Escalope haché, pain brioché, fromage, laitue, tomate, oignons grillés et sauce spéciale</i></p>
+                          <p><b>price:<i>250 DA.</i></b></p>
+                    </li>
+                  </ul>
+                </section>
+      </div>
+<div>
+				<section>
+                <div class="menu">
+					<div class="item">
+						<img width="1500" weight="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a19.jpg"alt="Sandwichs">
+						<section id="sandwich/raghif">
+						<h2><u>sandwich/raghif</u></h2>
+						<ul>
+							<li>
+							  <h3>Sandwich escalope</h3>
+							  <p>escalope , frit,salade,fromage.</p>
+							  <p>250 dA.</p>
+							</li>
+							<li>
+							  <h3>Sandwich viande haché</h3>
+							  <p> viande haché, frit,salade,fromage.</p>
+							  <p>250 DA.</p>
+							</li>
+							<li>
+							  <h3> Sandwich kabda</h3>
+							  <p>kabda , frit,salade,fromage.</p>
+							  <p>250 DA.</p>
+				  
+							</li>
+							<li>
+							  <h3> Sandwich chawerma</h3>
+							  <p>chawerma , frit,salade,fromage.</p>
+							  <p>250 DA.</p>
+				  
+							</li>
+						  </ul>	
+						</section></div>
+            <div>
+					<section>
+					<div class="menu">
+						<div class="item">
+							<img src="C:\Users\LEGION\Documents\arrow project\pics\a1.jpg"alt="pizzas">
+							<section id="pizzas">
+							<h2><u>pizzas</u></h2>
+							<h2>Pizzas (base de Sauce tomate) </h2>
+        <ul>
+          <li>
+            <h3>Margarita Pizza</h3>
+            <p>Sauce tomate, fromage,poivron.</p>
+            <p>250 DA.</p>
+          </li>
+          <li>
+            <h3>buffalo Pizza</h3>
+            <p>Sauce tomate,fromage,poivron, viande hachée </p>
+            <h4>L</h4>
+            <p>350 DA.</p>
+            <h4>xL</h4>
+            <p>700 DA.</p>
+            <h4>xxL</h4>
+            <p>1050 DA.</p>
+          </li>
+          <li>
+            <h3>fermiere Pizza</h3>
+            <p>Sauce tomate,fromage,poivron, escalope hachée </p>
+            <h4>L</h4>
+            <p>300 DA.</p>
+            <h4>xL</h4>
+            <p>600 DA.</p>
+            <h4>xxL</h4>
+            <p>900 DA.</p>
+          </li>
+          <li>
+            <h3>oriental Pizza</h3>
+            <p>Sauce tomate,fromage,poivron, mergez </p>
+            <h4>L</h4>
+            <p>350 DA.</p>
+            <h4>xL</h4>
+            <p>700 DA.</p>
+            <h4>xxL</h4>
+            <p>1050 DA.</p>
+          </li>
+          <li>
+            <h3>champignon Pizza</h3>
+            <p>Sauce tomate,fromage,poivron,champignon </p>
+            <h4>L</h4>
+            <p>350 DA.</p>
+            <h4>xL</h4>
+            <p>700 DA.</p>
+            <h4>xxL</h4>
+            <p>1050 DA.</p>
+          </li>
+          <li>
+            <h3>tonata Pizza</h3>
+            <p>Sauce tomate,fromage,poivron,thon </p>
+            <h4>L</h4>
+            <p>350 DA.</p>
+            <h4>xL</h4>
+            <p>700 DA.</p>
+            <h4>xxL</h4>
+            <p>1000 DA.</p>
+          </li>
+          <h2>Pizzas (base de creme fraiche) </h2>
+            <li>
+              <h3>boisee  Pizza</h3>
+              <p>creme fraiche, fromage,sauce gruyere,escalope.</p>
+              <h4>L</h4>
+              <p>350 DA.</p>
+              <h4>xL</h4>
+              <p>700 DA.</p>
+              <h4>xxL</h4>
+              <p>1050 DA.</p>
+            </li>
+            <li>
+              <h3>>boisee viande Pizza</h3>
+              <p> creme fraiche, fromage,sauce gruyere,viande hachée</p>
+              <h4>L</h4>
+              <p>400 DA.</p>
+              <h4>xL</h4>
+              <p>800 DA.</p>
+              <h4>xxL</h4>
+              <p>1200 DA.</p>
+            </li>
+            <li>
+              <h3>boisee oriental Pizza</h3>
+              <p>creme fraiche, fromage,sauce gruyere,mergez </p>
+              <h4>L</h4>
+              <p>400 DA.</p>
+              <h4>xL</h4>
+              <p>800 DA.</p>
+              <h4>xxL</h4>
+              <p>1200 DA.</p>
+            </li>
+            <li>
+              <h3> boisee champignon Pizza</h3>
+              <p>creme fraiche, fromage,sauce gruyere,champignon </p>
+              <h4>L</h4>
+              <p>400 DA.</p>
+              <h4>xL</h4>
+              <p>800 DA.</p>
+              <h4>xxL</h4>
+              <p>1200 DA.</p>
+            </li>
+            <li>
+              <h3>boisee 4 fromage Pizza</h3>
+              <p>creme fraiche, plusieurs types de fromage,sauce gruyere</p>
+              <h4>L</h4>
+              <p>450 DA.</p>
+              <h4>xL</h4>
+              <p>900 DA.</p>
+              <h4>xxL</h4>
+              <p>13500 DA.</p>
+            </li>
+            <li>
+              <h3> bienca kebab Pizza</h3>
+              <p>creme fraiche, fromage,sauce gruyere,kebab </p>
+              <h4>L</h4>
+              <p>400 DA.</p>
+              <h4>xL</h4>
+              <p>800 DA.</p>
+              <h4>xxL</h4>
+              <p>1200 DA.</p>
+            </li>
+            <h2>Pizzas (autre et delicieux pizzas) </h2>
+              <li>
+                <h3>sweety  Pizza</h3>
+                <p>4 saisons</p>
+                <h4>L</h4>
+                <p>500 DA.</p>
+                <h4>xL</h4>
+                <p>1000 DA.</p>
+                <h4>xxL</h4>
+                <p>1500 DA.</p>
+              </li>
+              <li>
+                <h3>kabeb Pizza</h3>
+                <p>Sauce tomate,fromage,poivron,kabeb</p>
+                <h4>L</h4>
+                <p>350 DA.</p>
+                <h4>xL</h4>
+                <p>700 DA.</p>
+                <h4>xxL</h4>
+                <p>1050 DA.</p>
+              </li>
+              <li>
+                <h3>reine Pizza</h3>
+                <p>Sauce tomate,fromage,jambon dinde</p>
+                <h4>L</h4>
+                <p>400 DA.</p>
+                <h4>xL</h4>
+                <p>800 DA.</p>
+                <h4>xxL</h4>
+                <p>1200 DA.</p>
+              </li>
+              <li>
+                <h3>hawainne Pizza</h3>
+                <p>Sauce tomate,fromage,ananas</p>
+                <h4>L</h4>
+                <p>450 DA.</p>
+                <h4>xL</h4>
+                <p>900 DA.</p>
+                <h4>xxL</h4>
+                <p>1350 DA.</p>
+              </li>
+              <li>
+                <h3>oceane Pizza</h3>
+                <p>Sauce tomate,fromage,fruit de mer</p>
+                <h4>L</h4>
+                <p>450 DA.</p>
+                <h4>xL</h4>
+                <p>900 DA.</p>
+                <h4>xxL</h4>
+                <p>1350 DA.</p>
+              </li>
+              <li>
+                <h3>1/2 Pizza</h3>
+                <p>2 saisons</p>
+                <h4>L</h4>
+                <p>450 DA.</p>
+                <h4>xL</h4>
+                <p>900 DA.</p>
+                <h4>xxL</h4>
+                <p>13500 DA.</p>
+              </li>
+			</section></div>
+          <div>
+			<section>
+		<div class="menu">
+		<div class="item">
+        <img width="1500" weight="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a20.jpg"alt="tacos">
+		<section id="tacos">
+		<h2><u>tacos</u></h2>
+		<ul>
+			<li>
+				<h3>tacobab</h3>
+				<p>chawarma.frite.fromage.sause gruyere</p>
+				<h4><b>price:</b><i>350 DA.</i></h4></li>
+				<li><h3>tacos escalope</h3>
+				<p>escalope.frite.fromage.sause gruyere</p>
+				<h4><b>price:</b><i>350 DA.</i></h4></li>
+				<li><h3>tacos viande hachée</h3>
+				<p>viande hachée.frite.fromage.sause gruyere</p>
+				<h4><b>price:</b><i>400 DA.</i></h4></il>
+				<li><h3>tacos mixte </h3>
+				<p>poulet.vinande hachée.frite.fromage.sause gruyere</p>
+				<h4><b>price:</b><i>400 DA.</i></h4></il>
+				<li><h3>tacos kabda </h3>
+				<p>kabda.frite.fromage.sause gruyere</p>
+				<h4><b>price:</b><i>400 DA.</i></h4></il>
+				<li><h3>tacos le phillys </h3>
+				<p>vinande hachée.ouef.frite.fromage.sause fromage</p>
+				<h4><b>price:</b><i>450 DA.</i></h4></il>
+
+				<li><h3>tacos gratiné escalope </h3>
+				<p>escalope.extra fromage .frite.sause gruyere</p>
+				<h4><b>price:</b><i></i>400DA.</h4></il>
+
+				<li><h3>tacos gratiné viande hachée</h3>
+				<p>viande hachée..frite.extra fromage.sause gruyere</p>
+				<h4><b>price:</b><i></i>4500DA.</h4></il>
+
+				<li><h3>tacos gratiné mexican</h3>
+				<p>escalope mexican.frite.fromage.sause gruyere</p>
+				<h4><b>price:</b><i></i>400DA.</h4></il>
+
+				<li><h3>tacos le fameux </h3>
+				<p>gratiné aux poulet fumeé.frite.fromage.sause gruyere</p>
+				<h4><b>price:</b><i></i>450DA.</h4></il>
+
+				<li><h3>tacos végétarien </h3>
+				<p>poulet.tomate.olive.poivron.frite.fromage.sause fromage</p>
+					<h4><b>price:</b><i></i>450DA.</h4></il>
+
+					<li>	<h3>tacos le montagnard </h3>
+				<p>gratiné aux cheddar.viande.fromage.sause gruyere</p>
+				<h4><b>price:</b><i></i>450DA.</h4></il>
+
+				<li>	<h3>tacos le gourmand </h3>
+				<p>gratiné aux 3 fromage.poulet.viande.frite.fromage.sause gruyere</p>
+				<h4><b>price:</b><i></i>500DA.</h4></il>
+        </section></div>
+        <div>
+        <section>
+          <div class="menu">
+    <div class="item">
+      <img width="2000" weight="2000" src="C:\Users\LEGION\Documents\arrow project\pics\a11.jpg"alt="malfouf">
+      <section id="malfouf">
+      <h2><u>malfouf</u></h2>
+      <ul>
+        <li>
+          <h3>malfouf escalope</h3>
+          <p>escalope , frit,salade,fromage.</p>
+          <p>250 dA.</p>
+        </li>
+        <li>
+          <h3>malfouf viande haché</h3>
+          <p> viande haché, frit,salade,fromage.</p>
+          <p>350 DA.</p>
+        </li>
+        <li>
+          <h3>malfouf kabda</h3>
+          <p>kabda , frit,salade,fromage.</p>
+          <p>300 DA.</p>
+    
+        </li>
+        <li>
+          <h3>malfouf  chawerma</h3>
+          <p>chawerma , frit,salade,fromage.</p>
+          <p>250 DA.</p>
+    
+        </li>
+        </ul>	
+      </section>
+    </div>
+    <div>
+      <section>
+        <div class="menu">
+  <div class="item">
+    <img width="2000" weight="2000" src="C:\Users\LEGION\Documents\arrow project\pics\a10.jpg"alt="ma9loub">
+    <section id="ma9loub">
+    <h2><u></u>ma9loub/soufflé</h2>
+    <ul>
+      <li>
+        <h3>ma9loub escalope</h3>
+        <p>escalope ,crème fraiche,fromage.</p>
+        <p>350 dA.</p>
+      </li>
+      <li>
+        <h3>ma9loub viande haché</h3>
+        <p> viande haché,crème fraiche,fromage.</p>
+        <p>350 DA.</p>
+      </li>
+      <li>
+        <h3>ma9loub  kabda</h3>
+        <p>kabda ,crème fraiche ,fromage.</p>
+        <p>400 DA.</p>
+  
+      </li>
+      <li>
+        <h3>ma9loub  chawerma</h3>
+        <p>chawerma ,crème fraiche,fromage.</p>
+        <p>350 DA.</p>
+  
+      </li>
+      <li>
+        <h3>ma9loub  sweety</h3>
+        <p>3 viande,crème fraiche,fromage.</p>
+        <p>450 DA.</p>
+  
+      </li>
+      </ul>	
+    </section>
+  </div>
+  <div>
+    <section>
+      <div class="menu">
+<div class="item">
+  <img width="1500" weight="5" src="C:\Users\LEGION\Documents\arrow project\pics\a6.jpg"alt="entrée ">
+  <section id="entrée">
+  <h2><u></u>entrée</h2>
+  <ul>
+    <li>
+      <h3>salade algerienne</h3>
+      <p>200 dA.</p>
+    </li>
+    <li>
+      <h3>salade césar</h3>
+      
+      <p>300 DA.</p>
+    </li>
+    <li>
+      <h3>macédoine</h3>
+      <p>300 DA.</p>
+
+    </li>
+    <li>
+      <h3>soupe de légumes</h3>
+      
+      <p>250 DA.</p>
+
+    </li>
+    <li>
+      <h3>
+        hmis
+      </h3>
+      
+      <p>200 DA.</p>
+
+    </li>
+    </ul>	
+  </section>
+</div>
+<div>
+  <section>
+    <div class="menu">
+<div class="item">
+<img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a3.jpg"alt="pasta">
+<section id="pasta">
+<h2><u>pasta</u></h2>
+<ul>
+  <li>
+    <h3>spaghittis polognaise</h3>
+    
+    <p>400 dA.</p>
+  </li>
+  <li>
+    <h3>pasta 3 fromages </h3>
+    
+    <p>450 DA.</p>
+  </li>
+  <li>
+    <h3>pasta fromage viande 
+    </h3>
+  
+    <p>450 DA.</p>
+
+  </li>
+  
+  </ul>	
+</section>
+</div>
+<div>
+  <section>
+    <div class="menu">
+<div class="item">
+<img width="1500"  src="C:\Users\LEGION\Documents\arrow project\pics\a9.jpg"alt="kintaki">
+<section id="kintaki">
+<h2><u>kintaki</u></h2>
+<ul>
+  <li>
+    <h3>boxi max</h3>
+    <h4> cuisse,haut de cuisse,tendre,aile,frite,salade,boisson </h4>
+    <p>650 dA.</p>
+  </li>
+  <li>
+    <h3>crispy tender </h3>
+    <h4>4 pieces tender,frite,salade,boisson </h4>
+    <p>550 DA.</p> 
+  </li>
+  <li>
+    <h3>le sol crispy
+    </h3>
+    <h4>sol crispy,frite,salade,boisson</h4>
+  
+    <p>650 DA.</p>
+
+  </li>
+  <li>
+    <h3>family box
+    </h3>
+    <h4>3 cuisse,3 haut de cuisse,3 tender,2 frite,salade,soda 1L</h4>
+  
+    <p>1600 DA.</p>
+
+  </li>
+  <li>
+    <h3>extra crispy
+    </h3>
+    <h4>10 tendre,3 frite,salade,soda 1L</h4>
+  
+    <p>1300 DA.</p>
+
+  </li>
+  <li>
+    <h3>extra family
+    </h3>
+    <h4>5 cuisse,5 haut de cuisse,5 tender,5 aile,4 frite,2 big salade,2 soda 1L</h4>
+  
+    <p>2500 DA.</p>
+
+  </li>
+  
+  </ul>	
+</section>
+</div>
+<div>
+  <section>
+    <div class="menu">
+<div class="item">
+<img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\145364156_977887629285161_6892735497287552978_n.jpg"alt="gratins">
+<section id="gratins">
+<h2><u>gratins</u></h2>
+<ul>
+  <li>
+    <h3>gratin poules</h3>
+    
+    <p>450 dA.</p>
+  </li>
+  <li>
+    <h3>gratin viande hachée </h3>
+    
+    <p>500 DA.</p>
+  </li>
+  <li>
+    <h3>gratin mixte
+    </h3>
+  
+    <p>500 DA.</p>
+
+  </li>
+  <li>
+    <h3>gratin 3 fromages
+    </h3>
+  
+    <p>550 DA.</p>
+
+  </li>
+  </ul>	
+</section>
+</div>
+<div>
+  <section>
+    <div class="menu">
+<div class="item">
+<img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a18.jpg"alt="plats">
+<section id="plats">
+<h2><u>plats</u></h2>
+<ul>
+  <li>
+    <h3>plat chawarma</h3>
+    <h4>chawarma, garniture</h4>
+    <p>450 dA.</p>
+  </li>
+  <li>
+    <h3>plat escalope panée </h3>
+    <h4>escalope,garniture</h4>
+    <p>600 DA.</p>
+  </li>
+  <li>
+    <h3>plat kabda
+    </h3>
+  <h4>kabda , garniture</h4>
+    <p>500 DA.</p>
+
+  </li>
+  <li>
+    <h3>plat viande hachée
+    </h3>
+  <h4>plat viande hachée, garniture</h4>
+    <p>550 DA.</p>
+    
+
+  </li>
+  <li>
+    <h3>plat kabab </h3>
+    <h4>brochet de chiche kabab, garniture</h4>
+    <p>550 DA</p>
+  </li>
+  <li>
+    <h3>plat cuisse roti </h3>
+    <h4>cuisse , garniture</h4>
+    <p>600 DA</p>
+  </li>
+  <li>
+    <h3>plat escalope a la creme</h3>
+    <h4>escalope a la creme, garniture</h4>
+    <p>600 DA</p>
+  </li>
+  <li>
+    <h3>plat poulet farci </h3>
+    <h4>poulet farci, garniture</h4>
+    <p>800 DA</p>
+  </li>
+  <li>
+    <h3>plat cordon bleu </h3>
+    <h4>cordon bleu, garniture</h4>
+    <p>650 DA</p>
+  </li>
+  <li>
+    <h3>plat mixte 2 viande </h3>
+    <h4>2 viande, garniture</h4>
+    <p>650 DA</p>
+  </li>
+  <li>
+    <h3>plat mixte 3 viande</h3>
+    <h4>mixte 3 viande, garniture</h4>
+    <p>800 DA</p>
+  </li>
+  <li>
+    <h3>plat de chef</h3>
+    <h4>surprise</h4>
+    <p>1000 DA</p>
+  </li>
+  <li>
+    <h3>plat maison</h3>
+    
+    <p>1400 DA</p>
+  </li>
+  </ul>	
+</section>
+</div>
+<div>
+  <section>
+    <div class="menu">
+<div class="item">
+<img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a5.jpg"alt="crepes">
+<section id="crepes">
+<h2><u>crepes</u></h2>
+<ul>
+  <li>
+    <h3>crepe nuttela</h3>
+    <h4></h4>
+    <p>250 dA.</p>
+  </li>
+  <li>
+    <h3>crepe nuttela au choix </h3>
+    <h4>amande-cajou-noix</h4>
+    <p>400 DA.</p>
+  </li>
+  <li>
+    <h3>crepe banane
+    </h3>
+  <h4></h4>
+    <p>300 DA.</p>
+
+  </li>
+  <li>
+    <h3>crepe banane au choix
+    </h3>
+    <h4>amande-cajou-noix</h4>
+    <p>450 DA.</p>
+    
+
+  </li>
+  <li>
+    <h3>crepe fruits
+    </h3>
+    <p>400 DA.</p>
+  </li>
+  <li>
+    <h3>crepe luxury au choix
+    </h3>
+    <h4>oreo-mars-bueno</h4>
+    <p>500 DA.</p>
+  </li>
+  <li>
+    <h3>crepe sweety
+    </h3>
+    <p>600 DA.</p>
+  </li>
+  </ul>	
+</section>
+</div>
+<div>
+  <section>
+    <div class="menu">
+<div class="item">
+<img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a7.jpg"alt="gaufre">
+<section id="gaufre">
+<h2><u>gaufres</u></h2>
+<ul>
+  <li>
+    <h3>gaufre nuttela</h3>
+    <h4></h4>
+    <p>250 dA.</p>
+  </li>
+  <li>
+    <h3>gaufre nuttela au choix </h3>
+    <h4>amande-cajou-noix</h4>
+    <p>400 DA.</p>
+  </li>
+  <li>
+    <h3>gaufre banane
+    </h3>
+  <h4></h4>
+    <p>300 DA.</p>
+
+  </li>
+  <li>
+    <h3>gaufre banane au choix
+    </h3>
+    <h4>amande-cajou-noix</h4>
+    <p>450 DA.</p>
+    
+
+  </li>
+  <li>
+    <h3>gaufre fruits
+    </h3>
+    <p>400 DA.</p>
+  </li>
+  <li>
+    <h3>gaufre luxury au choix
+    </h3>
+    <h4>oreo-mars-bueno</h4>
+    <p>500 DA.</p>
+  </li>
+  <li>
+    <h3>gaufre sweety
+    </h3>
+    <p>600 DA.</p>
+  </li>
+  </ul>	
+</section>
+</div>
+<div >
+  
+  <section>
+    <div class="menu">
+<div class="item">
+<img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a13.jpg"alt="pancake">
+<section id="pancake">
+<h2><u>pancakes</u></h2>
+<ul>
+  <li>
+    <h3>pancake nuttela</h3>
+    <h4></h4>
+    <p>250 dA.</p>
+  </li>
+  <li>
+    <h3>pancake nuttela au choix </h3>
+    <h4>amande-cajou-noix</h4>
+    <p>400 DA.</p>
+  </li>
+  <li>
+    <h3>pancake banane
+    </h3>
+  <h4></h4>
+    <p>300 DA.</p>
+
+  </li>
+  <li>
+    <h3>pancake banane au choix
+    </h3>
+    <h4>amande-cajou-noix</h4>
+    <p>450 DA.</p>
+    
+
+  </li>
+  <li>
+    <h3>pancake fruits
+    </h3>
+    <p>400 DA.</p>
+  </li>
+  <li>
+    <h3>pancake luxury au choix
+    </h3>
+    <h4>oreo-mars-bueno</h4>
+    <p>500 DA.</p>
+  </li>
+  <li>
+    <h3>pancake sweety
+    </h3>
+    <p>600 DA.</p>
+  </li>
+  </ul>	
+</section>
+
+</div>
+<section>
+  <div class="menu">
+<div class="item">
+<img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a2.jpg"alt="bubble waffles">
+<section id="bubble waffle">
+<h2><u>bubble waffles</u></h2>
+<ul>
+<li>
+  <h3>bubble waffle nuttela</h3>
+  <h4>boule de glace</h4>
+  <p>400 dA.</p>
+</li>
+
+<li>
+  <h3>bubble waffle banane
+  </h3>
+<h4>boule de glace</h4>
+  <p>500 DA.</p>
+
+</li>
+
+<li>
+  <h3>bubble waffle sweety
+  </h3>
+  <p>600 DA.</p>
+</li>
+</ul>	
+</section>
+</div>
+<div>
+<section>
+  <div class="menu">
+<div class="item">
+<img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a17.jpg"alt="dessert">
+<section id="dessert">
+<h2><u>dessert</u></h2>
+<ul>
+<li>
+  <h3>tiramisu</h3>
+  <p><b>250 dA.</b></p>
+</li>
+
+<li>
+  <h3>mousse aux chocolat</h3>
+
+  <p><i><b> 250 DA.</b></i></p>
+
+</li>
+
+<li>
+  <h3>cheesecake</h3>
+  <p><i><b>250 DA.</b></i></p>
+</li>
+</ul>	
+</section>
+
+</div>
+<div>
+  <section>
+    <div class="menu">
+  <div class="item">
+  <img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a21.jpg"alt="fruitella">
+  <section id="fruitella">
+  <h2><u>fruitella</u></h2>
+  <ul>
+  <li>
+    <h3>salade de fruit</h3>
+    <p><b>250 dA.</b></p>
+  </li>
+  
+  <li>
+    <h3>brochettes de fruits aux nuttela</h3>
+  
+    <p><i><b> 300 DA.</b></i></p>
+  
+  </li>
+  
+  <li>
+    <h3>fruit au chocolat</h3>
+    <p><i><b>350 DA.</b></i></p>
+  </li>
+  </ul>	
+  </section>
+  
+  </div>
+  
+    <div>
+      <section>
+        <div class="menu">
+      <div class="item">
+      <img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a15.jpg"alt="smoothies">
+      <section id="smoothies">
+      <h2><u>smoothies</u></h2>
+      <ul>
+      <li>
+        <h3>smoothie fraise</h3>
+        <p><b>400 dA.</b></p>
+      </li>
+      
+      <li>
+        <h3>smoothie chocolat</h3>
+      
+        <p><i><b> 400 DA.</b></i></p>
+      
+      </li>
+      
+      <li>
+        <h3>smoothie tropical</h3>
+        <p><i><b>400 DA.</b></i></p>
+      </li>
+      <li>
+        <h3>smoothie maison</h3>
+        <p><i><b>600 DA.</b></i></p>
+      </li>
+
+      </ul>	
+      </section>
+      
+      </div>
+      <div>
+        <section>
+          <div class="menu">
+        <div class="item">
+        <img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a12.jpg"alt="milkchakes">
+        <section id="milkchakes">
+        <h2><u>milkchakes</u></h2>
+        <ul>
+        <li>
+          <h3>milkchake classique</h3>
+          <p><b>350 dA.</b></p>
+        </li>
+        
+        <li>
+          <h3>milkchake kinder</h3>
+        
+          <p><i><b> 450 DA.</b></i></p>
+        
+        </li>
+        
+        <li>
+          <h3>milkchake kitkat</h3>
+          <p><i><b>450 DA.</b></i></p>
+        </li>
+        <li>
+          <h3>milkchake oreo</h3>
+          <p><i><b>450 DA.</b></i></p>
+        </li>
+  
+        </ul>	
+        </section>
+        
+        </div>
+        <div>
+          <section>
+            <div class="menu">
+          <div class="item">
+          <img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a8.jpg"alt="boisson froides">
+          <section id="boisson froides">
+          <h2><u>boisson froides</u></h2>
+          <ul>
+          <li>
+            <h3>jus nature cocktail</h3>
+            <p><b>250 dA.</b></p>
+          </li>
+          
+          <li>
+            <h3>jus nature au choix</h3>
+          
+            <p><i><b> 250 DA.</b></i></p>
+          
+          </li>
+          
+          <li>
+            <h3>jus citron</h3>
+            <p><i><b>250 DA.</b></i></p>
+          </li>
+          <li>
+            <h3>mojito ananas </h3>
+            <p><i><b>300 DA.</b></i></p>
+          </li>
+          <li>
+            <h3>mojito fraise </h3>
+            <p><i><b>300 DA.</b></i></p>
+          </li>
+          <li>
+            <h3>mojito bleu  </h3>
+            <p><i><b>300 DA.</b></i></p>
+          </li>
+          
+    
+          </ul>	
+          </section>
+          
+          </div>
+          <div>
+            <section>
+              <div class="menu">
+            <div class="item">
+            <img width="1500" src="C:\Users\LEGION\Documents\arrow project\pics\a4.jpg"alt="boisson chaudes">
+            <section id="boisson chaudes">
+            <h2><u>boisson chaudes</u></h2>
+            <ul>
+            <li>
+              <h3>cafe</h3>
+              <p><b>250 dA.</b></p>
+            </li>
+            
+            <li>
+              <h3>tea</h3>
+            
+              <p><i><b> 400 DA.</b></i></p>
+            
+            </li>
+            
+            <li>
+              <h3>cappuccino</h3>
+              <p><i><b>300 DA.</b></i></p>
+            </li>
+            <li>
+              <h3>chocolat chaud </h3>
+              <p><i><b>450 DA.</b></i></p>
+            </li>
+            <li>
+              <h3>lait </h3>
+              <p><i><b>400 DA.</b></i></p>
+           
+      
+            </ul>	
+            </section>
+            
+            </div>
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+										</section></div>
+                    
+                    
+                    
+
+			
+
+
+
+
+
+
+
+
+
+									</body>
+</html>
+                    
+                    
+            
